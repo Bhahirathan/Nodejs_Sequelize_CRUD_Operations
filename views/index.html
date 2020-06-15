@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Site</title>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <style>
+        body { padding-top:50px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+<form action="/books/viewall" method="GET">
+  <input type="submit" value="View all">
+</form><br>
+		<b>Add</b><br><br>
+		<form action="/books/" method="POST">
+  <label for="fname">Id:</label>
+  <input type="text" id="fname" name="id" >
+  <label for="lname">Title:</label>
+  <input type="text" id="lname" name="title" value="Doe">
+  <label for="lname">Author:</label>
+  <input type="text" id="book" name="author" value="Doe">
+  <label for="lname">Book:</label>
+  <input type="text" id="book" name="book" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+  </form>
+  <br>
+  <b>Search</b>
+  <br><br>
+  <form action="/books/search/" method="GET">
+  <label for="fname">Id:</label><br>
+  <input type="text" id="fname" name="id" ><br><br>
+  <input type="submit" value="Submit">
+</form> 
+<br>
+<b>Update</b><br><br>
+<form action="/books/update/" method="POST">
+  <label for="fname">Id:</label>
+  <input type="text" id="fname" name="id" >
+  <label for="lname">Title:</label>
+  <input type="text" id="lname" name="title" value="Doe">
+  <label for="lname">Author:</label>
+  <input type="text" id="book" name="author" value="Doe">
+  <label for="lname">Book:</label>
+  <input type="text" id="book" name="book" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form><br>
+<b>Delete</b><br><br>
+<form action="/books/delete/" method="GET">
+  <label for="fname">Id:</label><br>
+  <input type="text" id="fname" name="id" ><br><br><br>
+  <input type="submit" value="Submit">
+</form> 
+    </div>
+
+</body>
+</html>
