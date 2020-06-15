@@ -31,20 +31,7 @@ app.get('/', function(req, res){
     console.log('listening on port: '+port);
  res.sendFile(path.join(__dirname + '/views/index.html'));
 });
-app.get('/f', function(req, res){
-Book.create({ 
-        id: req.query.id, 
-        title: req.query.title,
-        author: req.query.author,
-	category:  req.query.book
-    }).then(book => {
-        console.log(book.get({
-          plain: true
-        }));
-        res.send(book);
-    });
-    console.log('Posted');
-});
+
 app.listen(port, function(){
     console.log('app listening on port: '+port);
 });
